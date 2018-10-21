@@ -39,5 +39,5 @@ let overlay = new overlayNI(config);
 let overlay = new overlayNI();
 
 //mostrar overlay
-overlayNI.show;
+overlay.show;
 ~~~
