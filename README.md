@@ -1,18 +1,29 @@
 # overlayNI
 **overlayNI.js** es una pantalla semi transparente en la cual puedes mostrar mensajes a pantalla completa al usuario. **overlayNI.js** es facil de usar y de configurar o puedes usar sus valores por defecto. (sin dependencias)
 
-## propiedades
+## Propiedades
 - show
--hide
+- hide
 
-## configuracion (opcional)
+## Configuracion (opcional)
 - fondo del overlay: background
 - color del texto: color
 - borde al rededor del texto: border (true|false)
 - texto en pantalla: text
-- duracion de la animacion: time
+- duracion de la animacion: time (milisegundos)
 
-### ejemplo de configuracion
+### Configuracion por defecto
+~~~javascript
+let default = {
+  background:'#fff',
+  color:'#000',
+  border:false,
+  time:700,
+  text:'Loading'
+}
+~~~
+
+### Ejemplo de configuracion
 ~~~javascript
 let config = {
   background:'red',
@@ -23,7 +34,7 @@ let overlay = new overlayNI(config);
 ~~~
 
 
-## ejemplo simple
+## Ejemplo simple
 ~~~javascript
 let overlay = new overlayNI();
 
