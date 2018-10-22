@@ -1,5 +1,9 @@
-# overlayNI
-**overlayNI.js** es una pantalla semi transparente en la cual puedes mostrar mensajes a pantalla completa al usuario. **overlayNI.js** es facil de usar y de configurar o puedes usar sus valores por defecto. (sin dependencias)
+# loadingOverlay 1.1
+**loadingOverlay.js** es una pantalla semi transparente en la cual puedes mostrar mensajes a pantalla completa al usuario. **loadingOverlay.js** es facil de usar y de configurar o puedes usar sus valores por defecto. (sin dependencias)
+
+## Descarga
+[Produccion](https://lpzmagdiel.neocities.org/loadingOverlay/loadingOverlay.js)
+[Produccion - comprimido](https://lpzmagdiel.neocities.org/loadingOverlay/loadingOverlay.min.js)
 
 ## Propiedades
 - show
@@ -11,6 +15,7 @@
 - borde al rededor del texto: border (true|false)
 - texto en pantalla: text
 - duracion de la animacion: time (milisegundos)
+- activar icono animado en lugar de texto: icon (true|false)
 
 ### Configuracion por defecto
 ~~~javascript
@@ -30,13 +35,13 @@ let config = {
   color:'white',
   border:true
 }
-let overlay = new overlayNI(config);
+let overlay = new loadingOverlay(config);
 ~~~
 
 
 ## Ejemplo simple
 ~~~javascript
-let overlay = new overlayNI();
+let overlay = new loadingOverlay();
 
 //mostrar overlay
 overlay.show;
