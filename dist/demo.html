@@ -10,17 +10,45 @@
 		padding: 0;
 		margin: 0;
 	}
-	img{
-		width: 100%;
+	body{
+			background-color: #660066;
+			color: white;
+			font-family: "century gothic";
+	}
+	input,button{
+		padding: 5px;
+		font-size: 1.2em;
+		text-align: center;
+		border-radius: 4px;
+		border: 2px solid white;
+		outline: none;
+		margin: 10px;
+	}
+	button{
+		background-color: white;
+		cursor: pointer;
 	}
 </style>
 <body>
-<img src="20703.jpg">
+<br>
+<br>
+<br>
+<br>
+<center>
+	<h2>Tiempo de carga en segundos:</h2>
+	<input type="number" id="time" min="1" value="2">
+	<button id="init">Iniciar</button>
+</center>
 <script src="loadingOverlay.js"></script>
 <script>
-	let loading = new loadingOverlay();
-	loading.show();
-	setTimeout(()=>{loading.hide()},4000);
+	let loading = new loadingOverlay('#000');
+	let time = document.getElementById('time');
+	let btn = document.getElementById('init');
+	btn.addEventListener('click',e=>{
+		loading.show();
+		setTimeout(()=>{loading.hide()},time.value*1000);
+	});
+	
 </script>
 </body>
 </html>

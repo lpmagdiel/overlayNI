@@ -1,4 +1,4 @@
-/*  loadingOverlay 1.2  */
+/*  loadingOverlay 1.2.1  */
 function loadingOverlay(color = "#fff"){
     let overlay = document.createElement('div');
     let deg = 0;
@@ -21,6 +21,11 @@ function loadingOverlay(color = "#fff"){
     overlay.appendChild(load);
     overlay.style.display = "none";
     document.body.appendChild(overlay);
+    window.addEventListener('resize',e=>{
+        console.log(e);
+        overlay.style.width = e.target.innerWidth+'px';
+        overlay.style.height = e.target.innerHeight+'px';
+    });
     window.setInterval(()=>{
         load.style.transform = `rotate(${deg}deg)`;
         deg+=360;
